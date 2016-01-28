@@ -10,14 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myLabel: UILabel!
+    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // 画面が起動された時に呼ばれる
+        myLabel.text = "こんにちは！"
+        myLabel.text = "コンニチハ！"
+        
     }
+    
 
+    @IBAction func btnTap(sender: UIButton) {
+    
+        myLabel.text = "こんにちは,世界！"
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // メモリ不足の通知を受け取った時
+        
     }
 
 
